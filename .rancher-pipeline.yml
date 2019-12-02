@@ -2,8 +2,8 @@ stages:
 - name: Build
   steps:
   - runScriptConfig:
-      image: maven:3-jdk-7
-      shellScript: mvn clean install
+      image: testharbor.bxhjhb.top/saas-test/maven:1.0
+      shellScript: mvn clean install -Dmaven.test.skip=true
 - name: Publish
   steps:
   - publishImageConfig:
